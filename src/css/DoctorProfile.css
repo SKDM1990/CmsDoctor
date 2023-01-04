@@ -1,0 +1,50 @@
+
+.doctorProfileCover {
+    padding: 30px;
+}
+
+.doctorCoverPhoto {
+    background: linear-gradient(to right, rgb(0,0,0, .2), rgb(0,0,0, .1)),url(../Images/profile-background.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 200px;
+}
+
+.doctorProfilePicture {
+    width: 200px;
+    height: 200px;
+}
+
+.doctorProfilePicture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #111;
+    transform: translate(70px, 80px);
+}
+
+.emptySpace {
+    height: 100px;
+    background-color: #fff;
+}
+
+.doctorProfileText {
+    background-color: #fff;
+}
+
+.doctorProfileText .profileTextHead {
+    text-align: center;
+}
+
+/* ======== personal info ============= */
+
+.personalInfoHead {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.personalInfo .personalInfoCol {
+    padding: 20px 0px;
+}
+

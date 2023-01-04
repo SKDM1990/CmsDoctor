@@ -1,0 +1,52 @@
+.otpBox {
+    margin-top: 30vh;
+}
+
+.otpImage {
+    width: 500px;
+    height: 400px;
+}
+
+.otpImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.otpBoxHead h2 {
+    font-family: var(---headFont);
+    text-align: center;
+    font-size: 50px;
+}
+
+.otpValue {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.resendBtnBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.resendBtn {
+    width: fit-content;
+    padding: 5px 8px;
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #111;
+}
+
+.submutBtn{
+    background: #4a6cf7;
+    margin-top: 30px;
+    padding: 10px 45px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+    line-height: 24px;
+    color: #fff;
+    border: #4a6cf7 solid 1px;
+}

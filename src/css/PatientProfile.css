@@ -1,0 +1,57 @@
+.AddPatientSection {
+    padding: 20px;
+}
+
+.patientsProfileHead {
+    font-family: var(---headFont);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.patientProfileDetails {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 10px 20px rgb(200 208 216 / 50%);
+}
+
+.patientProfileDetails .input-style-1 label,
+.patientProfileDetails .smsHeading  {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #262d3f;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.addressLable {
+    visibility: hidden;
+}
+
+.patientProfileDetails .input-style-1 input,
+.patientProfileDetails .input-style-1 select {
+    width: 100%;
+    background: rgba(239, 239, 239, 0.5);
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 8px;
+    color: #5d657b;
+    resize: none;
+    transition: all 0.3s;
+}
+
+.patientDetailSubmit  {
+    display: flex;
+    justify-content: center;
+}
+
+.patientDetailSubmit button{
+    margin-top: 20px;
+    background: #4a6cf7;
+    color: #fff;
+    border: 1px solid #4a6cf7;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 8px 10px;
+}
