@@ -80,12 +80,12 @@ const DoctorProfile = () => {
                     <h4>rahulrane@gmail.com</h4>
                   </div>
                 </div>
-                {/* <div className="col-md-4 d-flex justify-content-center align-items-center">
+                <div className="col-md-4 d-flex justify-content-center align-items-center">
                   <div className="personalInfoCol">
                     <h6>Degree</h6>
                     <h4>MBBS, MS, DNB</h4>
                   </div>
-                </div> */}
+                </div>
                 <div className="col-md-4 d-flex justify-content-center align-items-center">
                   <div className="personalInfoCol">
                     <h6>Additional Qualification</h6>
