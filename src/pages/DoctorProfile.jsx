@@ -50,12 +50,12 @@ const DoctorProfile = () => {
                     <h4>1982-08-06</h4>
                   </div>
                 </div>
-                {/* <div className="col-md-4 d-flex justify-content-center align-items-center">
+                <div className="col-md-4 d-flex justify-content-center align-items-center">
                   <div className="personalInfoCol">
                     <h6>Gender</h6>
                     <h4>Male</h4>
                   </div>
-                </div> */}
+                </div>
                 <div className="col-md-4 d-flex justify-content-center align-items-center">
                   <div className="personalInfoCol">
                     <h6>Category</h6>
