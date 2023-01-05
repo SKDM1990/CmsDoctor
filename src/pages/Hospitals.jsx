@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import "../css/Users.css";
 import $ from "jquery";
 import { Link } from "react-router-dom";
-
 import {
   useViewHospitalQuery,
   useDeleteHospitalMutation,

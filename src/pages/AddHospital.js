@@ -5,7 +5,6 @@ import SideBar from '../components/Sidebar/SideBar';
 import { useAddNewHospitalMutation, useViewOnlyHospitalQuery, useEditHospitalMutation } from "../services/userAuthAPI";
 import "../css/AddHospital.css";
 import { useParams } from 'react-router-dom';
-// images
 import HospitalVector from '../Images/hospital-vector.png';
 import NavbarComp from "../components/NavbarComp/NavbarComp.js";
 import { getToken } from '../services/localStorageServices';
