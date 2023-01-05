@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import $ from "jquery";
 import "../css/Patients.css";
 import { Link } from "react-router-dom";
@@ -6,15 +6,30 @@ import SideBar from "../components/Sidebar/SideBar";
 import NavbarComp from "../components/NavbarComp/NavbarComp.js";
 // images
 import Patient1 from "../Images/patients/patient-1.jpg";
-import Patient2 from "../Images/patients/patient-2.jpg";
-import Patient3 from "../Images/patients/patient-3.jpg";
-import Patient4 from "../Images/patients/patient-4.jpg";
-import Patient5 from "../Images/patients/patient-5.jpg";
+import { useViewPateintProfileQuery } from "../services/userAuthAPI";
+// import Patient2 from "../Images/patients/patient-2.jpg";
+// import Patient3 from "../Images/patients/patient-3.jpg";
+// import Patient4 from "../Images/patients/patient-4.jpg";
+// import Patient5 from "../Images/patients/patient-5.jpg";
 // icons
+import { getToken } from "../services/localStorageServices";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 
 const Patinents = () => {
+  const { access_token } = getToken();
+  const [server_error_side, setServerError_side] = useState({});
+  const [listData, setListData] = useState([]);
+  const { data, isSuccess } = useViewPateintProfileQuery({ token: access_token });
+
+  useEffect(()=>{
+      if (data) {
+        console.log(data)
+        setListData(data);
+      }
+    }, [data]);
+
+
   $(".dropdown ul li").on("click", function () {
     var text = $(".default_option").text();
     console.log(text);
@@ -45,277 +60,44 @@ const Patinents = () => {
                   <th scope="col">Full Name</th>
                   <th scope="col">Number</th>
                   <th scope="col">Email</th>
-                  <th scope="col">Patient Type</th>
+                  <th scope="col">Bookmark</th>
                   <th scope="col">Edit</th>
                   <th scope="col">Delete</th>
                 </tr>
               </thead>
               <tbody>
+              {listData &&
+                  listData.map((workObj, index) => (
                 <tr>
-                  <th scope="row">1</th>
+                  <th scope="row" style={{fontWeight:"500",color:"#2b5a89" }}>{workObj.pid}</th>
                   <td className="d-flex justify-content-center">
                     <div className="patientImg">
-                      <img src={Patient1} alt="" />
-                    </div>
-                  </td>
-                  <td>Monika Chaturvedi</td>
-                  <td>9876543215</td>
-                  <td>
-                    <div className="careTakerNo">chaturvedimonn@gmail.com</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox favouriteClass">
-                      Favourite
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient2} alt="" />
-                    </div>
-                  </td>
-                  <td>Rohit Sharma</td>
-                  <td>9874543212</td>
-                  <td>
-                    <div className="careTakerNo">rohit@gmail.com</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox notoriousClass">
-                      Notorious
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient3} alt="" />
-                    </div>
-                  </td>
-                  <td>Manan Bajaj</td>
-                  <td>7874543212</td>
-                  <td>
-                    <div className="careTakerNo">mananbajaj@gmail.com</div>
-                  </td>
-                  <td></td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient4} alt="" />
-                    </div>
-                  </td>
-                  <td>Samiksha Gawai</td>
-                  <td>7874543212</td>
-                  <td>
-                    <div className="careTakerNo">sammgawai@gmail.com</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox surgicalClass">Surgical</div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient5} alt="" />
-                    </div>
-                  </td>
-                  <td>Ruchi Patel</td>
-                  <td>7874543212</td>
-                  <td>
-                    <div className="careTakerNo">patelruchi@gmail.com</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox favouriteClass">
-                      Favourite
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient1} alt="" />
-                    </div>
-                  </td>
-                  <td>Monika Khanna</td>
-                  <td>9876543215</td>
-                  <td>
-                    <div className="careTakerNo">khannamonika@gmail.com</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox surgicalClass">Surgical</div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient2} alt="" />
-                    </div>
-                  </td>
-                  <td>Rohit Yadav</td>
-                  <td>9874543212</td>
-                  <td>
-                    <div className="careTakerNo">rohittadav@gmail.com</div>
-                  </td>
-                  <td></td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">8</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient3} alt="" />
-                    </div>
-                  </td>
-                  <td>Manan Gupta</td>
-                  <td>7874543212</td>
-                  <td>
-                    <div className="careTakerNo">mgupta@gmail.com</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox favouriteClass">
-                      Favourite
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon tableEdit">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">9</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient4} alt="" />
-                    </div>
-                  </td>
-                  <td>Samiksha Salgavkar</td>
-                  <td>7874543212</td>
-                  <td>
-                    <div className="careTakerNo">Samiksha@gmail.com</div>
-                  </td>
-                  <td></td>
-                  <td>
-                    <div className="tableIcon editIcon tableIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">10</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-                      <img src={Patient5} alt="" />
-                    </div>
-                  </td>
-                  <td>Ruchi Soni</td>
-                  <td>7874543212</td>
-                  <td>
-                    <div className="careTakerNo">sonir@gmail.com</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox favouriteClass">
-                      Favourite
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
 
+                      <img src={workObj.patient_profile_Image} alt="" />
+                    </div>
+                  </td>
+                  <td>{workObj.patient_first_name}</td>
+                  <td>{workObj.patient_phone_no}</td>
+                  <td>
+                    <div className="careTakerNo">{workObj.patient_email}</div>
+                  </td>
+                  <td>
+                    <div className="patientTypeBox favouriteClass">
+                      Favourite
+                    </div>
+                  </td>
+                  <td>
+                    <div className="tableIcon editIcon">
+                      <FaEdit />
+                    </div>
+                  </td>
                   <td>
                     <div className="tableIcon deleteIcon">
                       <MdDelete />
                     </div>
                   </td>
                 </tr>
+                   ))}
               </tbody>
             </table>
           </div>

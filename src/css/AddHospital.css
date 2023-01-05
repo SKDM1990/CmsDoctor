@@ -1,307 +1,321 @@
 .doctorDetails {
-  margin: 20px 30px;
+    margin: 20px 30px;
 }
 
-.doctorDetails .card-style {
-  background: #fff;
-  box-sizing: border-box;
-  padding: 25px 30px;
-  position: relative;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0px 10px 20px rgb(200 208 216 / 30%);
-  border-radius: 10px;
+.doctorDetails .card-style,
+.AddPatientSection .card-style {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 25px 30px;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0px 10px 20px rgb(200 208 216 / 30%);
+    border-radius: 10px;
 }
 
 .mb-30 {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .doctorDetails .title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #262d3f;
-  margin: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #262d3f;
+    margin: 10px 0;
 }
 
 .doctorDetails .profile-image {
-  max-width: 75px;
-  width: 100%;
-  height: 75px;
-  border-radius: 50%;
-  margin-right: 20px;
-  position: relative;
-  z-index: 1;
+    max-width: 75px;
+    width: 100%;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .doctorDetails .profile-image img {
-  width: 100%;
-  border-radius: 50%;
+    width: 100%;
+    border-radius: 50%;
 }
 
 .doctorDetails .header-search form {
-  width: 100%;
-  position: relative;
+    width: 100%;
+    position: relative;
 }
 
 .doctorDetails .header-search form input {
-  width: 100%;
-  border: 1px solid #efefef;
-  background: rgba(239, 239, 239, 0.5);
-  border-radius: 10px;
-  height: 46px;
-  padding-left: 44px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+    width: 100%;
+    border: 1px solid #efefef;
+    background: rgba(239, 239, 239, 0.5);
+    border-radius: 10px;
+    height: 46px;
+    padding-left: 44px;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
 }
 
 .doctorDetails .header-search form button {
-  position: absolute;
-  border: none;
-  background: transparent;
-  left: 16px;
-  top: 0;
-  height: 46px;
-  color: #5d657b;
-  font-weight: 700;
+    position: absolute;
+    border: none;
+    background: transparent;
+    left: 16px;
+    top: 0;
+    height: 46px;
+    color: #5d657b;
+    font-weight: 700;
 }
 
 .doctorDetails .header-search form input:focus {
-  border: 1px solid #4a6cf7 !important;
-  outline: 0;
+    border: 1px solid #4a6cf7 !important;
+    outline: 0;
 }
 
 .doctorDetails .input-style-1 {
-  position: relative;
-  margin-bottom: 10px;
+    position: relative;
+    margin-bottom: 10px;
 }
 
 .doctorDetails .input-style-1 label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #262d3f;
-  display: block;
-  margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #262d3f;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .doctorDetails .input-style-1 input,
 .doctorDetails .input-style-1 textarea {
-  width: 100%;
-  background: rgba(239, 239, 239, 0.5);
-  border: 1px solid #e5e5e5;
-  border-radius: 4px;
-  padding: 8px;
-  color: #5d657b;
-  resize: none;
-  transition: all 0.3s;
+    width: 100%;
+    background: rgba(239, 239, 239, 0.5);
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 8px;
+    color: #5d657b;
+    resize: none;
+    transition: all 0.3s;
 }
 
 .doctorDetails .input-style-1 input:focus,
 .doctorDetails .input-style-1 textarea:focus {
-  border-color: #4a6cf7;
-  background: #fff;
-  outline: 0;
+    border-color: #4a6cf7;
+    background: #fff;
+    outline: 0;
 }
+
 .doctorDetails .input-style-1 input[type="date"],
 .doctorDetails .input-style-1 input[type="time"],
 .doctorDetails .input-style-1 textarea[type="date"],
 .doctorDetails .input-style-1 textarea[type="time"] {
-  background: transparent;
+    background: transparent;
 }
 
 .doctorDetails .input-style-1 input.light-bg[type="date"],
 .doctorDetails .input-style-1 input.light-bg[type="time"],
 .doctorDetails .input-style-1 textarea.light-bg[type="date"],
 .doctorDetails .input-style-1 textarea.light-bg[type="time"] {
-  background: rgba(239, 239, 239, 0.5);
+    background: rgba(239, 239, 239, 0.5);
 }
+
 .doctorDetails .input-style-1 input.light-bg[type="date"]:focus,
 .doctorDetails .input-style-1 input.light-bg[type="time"]:focus,
 .doctorDetails .input-style-1 textarea.light-bg[type="date"]:focus,
 .doctorDetails .input-style-1 textarea.light-bg[type="time"]:focus {
-  background: #fff;
+    background: #fff;
 }
 
 .doctorDetails .form-select:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
+
 .doctorDetails .searchBarResult span {
-  font-size: 0.9rem;
-  background-color: #ffffff;
-  padding: 6px;
-  color: #111;
-  border-radius: 6px;
-  cursor: pointer;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    padding: 6px;
+    color: #111;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .doctorDetails .searchBarResult span:hover {
-  border: 1px solid #4a6cf7;
+    border: 1px solid #4a6cf7;
 }
 
 .doctorDetails .btn-group {
-  display: table;
-  width: 50%;
-  table-layout: fixed;
+    display: table;
+    width: 50%;
+    table-layout: fixed;
 }
+
 .doctorDetails .flexbox .btn-group {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
 }
+
 .doctorDetails .btn-group .btn-inner {
-  display: table-cell;
-  position: relative;
-  margin-left: -2px;
-  border: 1px solid #4a6cf7;
-  color: #111;
-  padding: 12px 20px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 500;
-  position: relative;
-  text-align: center;
-  transition: all 0.1s ease-in;
-  vertical-align: middle;
-  z-index: 0;
+    display: table-cell;
+    position: relative;
+    margin-left: -2px;
+    border: 1px solid #4a6cf7;
+    color: #111;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    transition: all 0.1s ease-in;
+    vertical-align: middle;
+    z-index: 0;
 }
+
 .doctorDetails .flexbox .btn-group .btn-inner {
-  flex: 1 1 0;
-  display: inline-block;
+    flex: 1 1 0;
+    display: inline-block;
 }
-.doctorDetails .btn-group .btn-inner + .btn-inner {
-  margin-left: -2px;
+
+.doctorDetails .btn-group .btn-inner+.btn-inner {
+    margin-left: -2px;
 }
+
 .doctorDetails .btn-group .btn-inner:first-child {
-  border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
 }
+
 .doctorDetails .btn-group .btn-inner:last-child {
-  border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
 }
+
 .doctorDetails .btn-group .btn-inner:hover {
-  background: #4a6cf7;
-  border-color: #4a6cf7;
-  color: white;
-  cursor: pointer;
-  z-index: 1;
+    background: #4a6cf7;
+    border-color: #4a6cf7;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
 }
+
 @media screen and (max-width: 34.75em) {
-  .doctorDetails .flexbox .btn-group {
-    flex-direction: column;
-  }
-  .doctorDetails .btn-group .btn-inner {
-    border-bottom: 0;
-  }
-  .doctorDetails .flexbox .btn-group .btn-inner {
-    flex: auto;
-  }
-  .doctorDetails .btn-group .btn-inner:first-child {
-    border-radius: 4px 4px 0 0;
-  }
-  .doctorDetails .btn-group .btn-inner:last-child {
-    border-radius: 0 0 4px 4px;
-    border-bottom: 2px solid #d9d9d9;
-  }
+    .doctorDetails .flexbox .btn-group {
+        flex-direction: column;
+    }
+    .doctorDetails .btn-group .btn-inner {
+        border-bottom: 0;
+    }
+    .doctorDetails .flexbox .btn-group .btn-inner {
+        flex: auto;
+    }
+    .doctorDetails .btn-group .btn-inner:first-child {
+        border-radius: 4px 4px 0 0;
+    }
+    .doctorDetails .btn-group .btn-inner:last-child {
+        border-radius: 0 0 4px 4px;
+        border-bottom: 2px solid #d9d9d9;
+    }
 }
 
 .auth-cover-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 45px;
-  position: relative;
-  z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+    position: relative;
+    z-index: 1;
 }
 
 .auth-cover-wrapper .auth-cover .title {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .text-primary {
-  color: #4a6cf7 !important;
+    color: #4a6cf7 !important;
 }
+
 .mb-10 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .mb-30 {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .text-medium {
-  font-weight: 500;
+    font-weight: 500;
 }
+
 .mb-25 {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 25px;
-  color: #5d657b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #5d657b;
 }
 
 .auth-cover-wrapper .auth-cover .cover-image {
-  max-width: 100%;
-  margin: auto;
+    max-width: 100%;
+    margin: auto;
 }
 
 .signup-wrapper {
-  background: #fff;
-  padding: 60px;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: #fff;
+    padding: 60px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .auth-cover-wrapper .auth-cover .cover-image img {
-  width: 100%;
+    width: 100%;
 }
 
 .auth-cover-wrapper .auth-cover .shape-image {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  bottom: 5%;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 5%;
 }
 
 .doctorDetails .profileImage {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #ffffff;
-  box-shadow: 0 0 8px 3px #b8b8b8;
-  position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #ffffff;
+    box-shadow: 0 0 8px 3px #b8b8b8;
+    position: relative;
 }
 
 .doctorDetails .profileImage img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
 }
 
 .doctorDetails .profileImage label {
-  position: absolute;
-  top: 91px;
-  right: -3px;
-  /* border: 1px solid; */
-  border-radius: 50%;
-  /* padding: 11px; */
-  height: 30px;
-  width: 30px;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  color: cornflowerblue;
-  box-shadow: 0 0 8px 3px #b8b8b8;
+    position: absolute;
+    top: 91px;
+    right: -3px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    /* padding: 11px; */
+    height: 30px;
+    width: 30px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: cornflowerblue;
+    box-shadow: 0 0 8px 3px #b8b8b8;
 }
 
 .productImages {
-  visibility: hidden;
+    visibility: hidden;
 }
