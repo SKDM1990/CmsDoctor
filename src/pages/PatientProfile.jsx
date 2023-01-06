@@ -19,8 +19,6 @@ const PatientProfile = () => {
                     <div className="auth-cover">
                       <div className="title text-center">
                         <h1 className="text-primary mb-10">
-                          {/* {" "}
-                          {listData == "" ? "Add Hospital" : "Edit Hospital"} */}
                           Add Patient 
                         </h1>
                       </div>
@@ -38,12 +36,7 @@ const PatientProfile = () => {
                 </div>
                 <div className="col-lg-8">
                 <div className="card-style settings-card-2 mb-30">
-                  <div className="row">
-                  
-
-
-
-                     
+                  <div className="row">    
                     <div className="col-md-6">
                       <div className="input-style-1">
                         <label>Patient Name</label>
@@ -52,30 +45,12 @@ const PatientProfile = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="input-style-1">
-                        {/* <label>Gender</label>
+                        <label>Gender</label>
                         <select name="Gender" id="Gender">
                           <option value="Male">Male</option>
                           <option value="Female">Female</option>
                           <option value="Other">Other</option>
-                        </select> */}
-                              <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
-          value={age}
-          label="Age"
-          onChange={handleChange}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>With label + helper text</FormHelperText>
-      </FormControl>
+                        </select>
                       </div>
                     </div>
                     <div className="col-md-6">
