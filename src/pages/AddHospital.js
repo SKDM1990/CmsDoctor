@@ -110,7 +110,7 @@ const AddHospital = () => {
                     <div className="title text-center">
                       <h1 className="text-primary mb-10">
                         {" "}
-                        {listData == "" ? "Add Hospital" : "Edit Hospital"}
+                        {listData == "" ? "Add Hospital Name" : "Edit Hospital"}
                       </h1>
                     </div>
                     <div className="cover-image" onSubmit={EditHospital}>
