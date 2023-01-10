@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import $ from "jquery";
 import "../css/Patients.css";
 import { Link } from "react-router-dom";
@@ -6,7 +6,10 @@ import SideBar from "../components/Sidebar/SideBar";
 import NavbarComp from "../components/NavbarComp/NavbarComp.js";
 // images
 import Patient1 from "../Images/patients/patient-1.jpg";
-import { useViewPateintProfileQuery } from "../services/userAuthAPI";
+import {
+  useViewPateintProfileQuery,
+  useDeletePatientMutation,
+} from "../services/userAuthAPI";
 // import Patient2 from "../Images/patients/patient-2.jpg";
 // import Patient3 from "../Images/patients/patient-3.jpg";
 // import Patient4 from "../Images/patients/patient-4.jpg";
@@ -20,15 +23,26 @@ const Patinents = () => {
   const { access_token } = getToken();
   const [server_error_side, setServerError_side] = useState({});
   const [listData, setListData] = useState([]);
-  const { data, isSuccess } = useViewPateintProfileQuery({ token: access_token });
+  const { data, isSuccess } = useViewPateintProfileQuery({
+    token: access_token
+  });
+  const [deletePatient, { isLoading }] = useDeletePatientMutation();
 
-  useEffect(()=>{
-      if (data) {
-        console.log(data)
-        setListData(data);
-      }
-    }, [data]);
+  useEffect(() => {
+    if (data) {
+      console.log(data);
+      setListData(data);
+    }
+  }, [data]);
 
+  console.log(data);
+
+  const DeletePateint = async (pid) => {
+    const formData = new FormData();
+    formData.append("token", access_token);
+    formData.append("patient_Id", pid);
+    const req = await deletePatient(formData);
+  };
 
   $(".dropdown ul li").on("click", function () {
     var text = $(".default_option").text();
@@ -66,38 +80,53 @@ const Patinents = () => {
                 </tr>
               </thead>
               <tbody>
-              {listData &&
+                {listData &&
                   listData.map((workObj, index) => (
-                <tr>
-                  <th scope="row" style={{fontWeight:"500",color:"#2b5a89" }}>{workObj.pid}</th>
-                  <td className="d-flex justify-content-center">
-                    <div className="patientImg">
-
-                      <img src={workObj.patient_profile_Image} alt="" />
-                    </div>
-                  </td>
-                  <td>{workObj.patient_first_name}</td>
-                  <td>{workObj.patient_phone_no}</td>
-                  <td>
-                    <div className="careTakerNo">{workObj.patient_email}</div>
-                  </td>
-                  <td>
-                    <div className="patientTypeBox favouriteClass">
-                      Favourite
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon editIcon">
-                      <FaEdit />
-                    </div>
-                  </td>
-                  <td>
-                    <div className="tableIcon deleteIcon">
-                      <MdDelete />
-                    </div>
-                  </td>
-                </tr>
-                   ))}
+                    <tr>
+                      <th
+                        scope="row"
+                        style={{ fontWeight: "500", color: "#2b5a89" }}
+                      >
+                        {workObj.pid}
+                      </th>
+                      <td className="d-flex justify-content-center">
+                        <div className="patientImg">
+                          <img src={workObj.patient_profile_Image} alt="" />
+                        </div>
+                      </td>
+                      <td>
+                        {workObj.patient_first_name +
+                          " " +
+                          workObj.patient_last_name}
+                      </td>
+                      <td>{workObj.patient_phone_no}</td>
+                      <td>
+                        <div className="careTakerNo">
+                          {workObj.patient_email}
+                        </div>
+                      </td>
+                      <td>
+                        <div className="patientTypeBox favouriteClass">
+                          Favourite
+                        </div>
+                      </td>
+                      <td>
+                        <Link to={`/patientProfile/${workObj.pid}`}>
+                          <div className="tableIcon editIcon">
+                            <FaEdit />
+                          </div>
+                        </Link>
+                      </td>
+                      <td>
+                        <div
+                          className="tableIcon deleteIcon"
+                          onClick={() => DeletePateint(workObj.pid)}
+                        >
+                          <MdDelete />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>

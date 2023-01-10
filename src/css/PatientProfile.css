@@ -43,7 +43,7 @@
 
 .patientDetailSubmit  {
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 .patientDetailSubmit button{
@@ -54,4 +54,47 @@
     border-radius: 5px;
     font-size: 17px;
     padding: 8px 10px;
+}
+
+
+.AddPatientSection .card-style .form-control:focus {
+box-shadow: none;
+overflow: unset;
+border-color: #86b7fe;
+
+}
+
+
+
+.AddPatientSection .profileImage {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #ffffff;
+    box-shadow: 0 0 8px 3px #b8b8b8;
+    position: relative;
+}
+
+.AddPatientSection .profileImage img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.AddPatientSection .profileImage label {
+    position: absolute;
+    top: 91px;
+    right: -3px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    /* padding: 11px; */
+    height: 30px;
+    width: 30px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: cornflowerblue;
+    box-shadow: 0 0 8px 3px #b8b8b8;
 }

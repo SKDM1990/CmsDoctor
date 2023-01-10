@@ -34,6 +34,7 @@ function App() {
         <Route path="/addHospital" element={<AddHospital />} />
         <Route path="/settings/profile" element={<DoctorProfile />} />
         <Route path="/patientProfile" element={<PatientProfile />} />
+        <Route path="/patientProfile/:pid" element={<PatientProfile />} />
         <Route path="/enterOtp" element={<EnterOtp />} />
         <Route path="/appointment" element={<Appointments />} />
         {/* <Route path="*" element={<> not found</>} /> */}
