@@ -99,6 +99,19 @@
     transition: all 0.3s;
 }
 
+.doctorDetails .daySelect .input-style-1 input {
+    width: 17px;
+    margin-right: 5px;
+  }
+
+  .daySelect .inputhead h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262d3f;
+    display: block;
+    margin-bottom: 10px;
+  }
+
 .doctorDetails .input-style-1 input:focus,
 .doctorDetails .input-style-1 textarea:focus {
     border-color: #4a6cf7;
