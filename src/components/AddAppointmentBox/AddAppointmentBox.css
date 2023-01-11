@@ -1,0 +1,251 @@
+.addAppointmentBox {
+    padding: 0px;
+}
+
+/* header */
+
+.appointmentAddBoxHeader {
+    text-align: center;
+    background-color: #e5e5e5;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+}
+
+.appointmentAddBoxHeader h6{
+  margin: 0;
+}
+
+/* ================= Form =================== */
+
+.addAppointmentBox form {
+    width: 100%;
+    position: relative;
+  }
+  
+  .addAppointmentBox form input {
+    width: 100%;
+    border: 1px solid #efefef;
+    background: rgba(239, 239, 239, 0.5);
+    border-radius: 10px;
+    height: 46px;
+    padding-left: 44px;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  
+  .addAppointmentBox form button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    left: 16px;
+    top: 0;
+    height: 46px;
+    color: #5d657b;
+    font-weight: 700;
+  }
+  
+  .addAppointmentBox form input:focus {
+    border: 1px solid #4a6cf7 !important;
+    outline: 0;
+  }
+  
+  .addAppointmentBox .input-style-1 {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .addAppointmentBox .input-style-1 label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262d3f;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .addAppointmentBox .input-style-1 input,
+  .addAppointmentBox .input-style-1 textarea,
+  .addAppointmentBox .input-style-1 select {
+    width: 100%;
+    background: rgba(239, 239, 239, 0.5);
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 8px;
+    color: #5d657b;
+    resize: none;
+    transition: all 0.3s;
+  }
+  
+  .addAppointmentBox .input-style-1 input:focus,
+  .addAppointmentBox .input-style-1 textarea:focus {
+    border-color: #4a6cf7;
+    background: #fff;
+    outline: 0;
+  }
+  .addAppointmentBox .input-style-1 input[type="date"],
+  .addAppointmentBox .input-style-1 input[type="time"],
+  .addAppointmentBox .input-style-1 textarea[type="date"],
+  .addAppointmentBox .input-style-1 textarea[type="time"] {
+    background: transparent;
+  }
+  
+  .addAppointmentBox .input-style-1 input.light-bg[type="date"],
+  .addAppointmentBox .input-style-1 input.light-bg[type="time"],
+  .addAppointmentBox .input-style-1 textarea.light-bg[type="date"],
+  .addAppointmentBox .input-style-1 textarea.light-bg[type="time"] {
+    background: rgba(239, 239, 239, 0.5);
+  }
+  .addAppointmentBox .input-style-1 input.light-bg[type="date"]:focus,
+  .addAppointmentBox .input-style-1 input.light-bg[type="time"]:focus,
+  .addAppointmentBox .input-style-1 textarea.light-bg[type="date"]:focus,
+  .addAppointmentBox .input-style-1 textarea.light-bg[type="time"]:focus {
+    background: #fff;
+  }
+  
+  .addAppointmentBox .form-select:focus {
+    box-shadow: none;
+  }
+  .addAppointmentBox .searchBarResult span {
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    padding: 6px;
+    color: #111;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .addAppointmentBox .searchBarResult span:hover {
+    border: 1px solid #4a6cf7;
+  }
+  
+  .addAppointmentBox .btn-group {
+    display: table;
+    width: 50%;
+    table-layout: fixed;
+  }
+  .addAppointmentBox .flexbox .btn-group {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+  .addAppointmentBox .btn-group .btn-inner {
+    display: table-cell;
+    position: relative;
+    margin-left: -2px;
+    border: 1px solid #4a6cf7;
+    color: #111;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    transition: all 0.1s ease-in;
+    vertical-align: middle;
+    z-index: 0;
+  }
+  .addAppointmentBox .flexbox .btn-group .btn-inner {
+    flex: 1 1 0;
+    display: inline-block;
+  }
+  .addAppointmentBox .btn-group .btn-inner + .btn-inner {
+    margin-left: -2px;
+  }
+  .addAppointmentBox .btn-group .btn-inner:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+  .addAppointmentBox .btn-group .btn-inner:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+  .addAppointmentBox .btn-group .btn-inner:hover {
+    background: #4a6cf7;
+    border-color: #4a6cf7;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+  @media screen and (max-width: 34.75em) {
+    .addAppointmentBox .flexbox .btn-group {
+      flex-direction: column;
+    }
+    .addAppointmentBox .btn-group .btn-inner {
+      border-bottom: 0;
+    }
+    .addAppointmentBox .flexbox .btn-group .btn-inner {
+      flex: auto;
+    }
+    .addAppointmentBox .btn-group .btn-inner:first-child {
+      border-radius: 4px 4px 0 0;
+    }
+    .addAppointmentBox .btn-group .btn-inner:last-child {
+      border-radius: 0 0 4px 4px;
+      border-bottom: 2px solid #d9d9d9;
+    }
+  }
+  
+.auth-cover-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .auth-cover-wrapper .auth-cover .title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .text-primary {
+    color: #4a6cf7 !important;
+  }
+  .mb-10 {
+    margin-bottom: 10px;
+  }
+  
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+  
+  .text-medium {
+    font-weight: 500;
+  }
+  .mb-25 {
+    margin-bottom: 25px;
+  }
+  
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #5d657b;
+  }
+  
+  .auth-cover-wrapper .auth-cover .cover-image {
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .signup-wrapper {
+    background: #fff;
+    padding: 60px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .auth-cover-wrapper .auth-cover .cover-image img {
+    width: 100%;
+  }
+  
+  .auth-cover-wrapper .auth-cover .shape-image {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 5%;
+  }
+  
