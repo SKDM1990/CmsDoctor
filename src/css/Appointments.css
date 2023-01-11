@@ -106,11 +106,15 @@
    right: 0;
    padding: 20px;
    box-shadow: 0 1px 4px rgba(216, 216, 216, 0.933);   
+   opacity: 0;
+}
+      
+.appointmentDetailBoxAppear{ 
    opacity: 1;
 }
 
-.appointmentDetailBoxAppear{
-   opacity: 1;
+.AddAppointmentSidebar {
+   opacity: 0;
 }
 
 .patientProfileApb {
@@ -156,4 +160,35 @@
 
 .buttonsAdb .deleteAdb {
    color: red;
+}
+
+/* =================== Add Appointment Sidebar ==================== */
+
+.AddAppointmentSidebar input {
+   padding: 5px;
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.AddAppointmentSidebar select {
+   padding: 5px;
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.bookAppointmentBtn {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.bookAppointmentBtn  button {
+   background: #4a6cf7;
+    color: #fff;
+    padding: 6px 8px;
+    border: #4a6cf7 solid 1px;
+    border-radius: 5px;
+}
+
+.AddAppointmentSidebarHead h6 {
+   text-align: center;
 }

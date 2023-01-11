@@ -1,0 +1,11 @@
+
+.addDrugBoxHead {
+    text-align: center;
+    padding: 5px 0px;
+    background-color: #eee;
+    margin-bottom: 15px;
+}
+
+.addDrugBoxHead h6 {
+    margin: 0;
+}
