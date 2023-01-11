@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const userAuthApi = createApi({
     reducerPath: "userAuthApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "http://doctorcms.adorre.in/" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://skdm.in/skddev/DrCrm/" }),
     endpoints: (builder) => ({
         registerUser: builder.mutation({
             query: (user) => {
