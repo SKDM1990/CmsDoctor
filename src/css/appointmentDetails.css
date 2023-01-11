@@ -1,0 +1,362 @@
+
+.prescriptionPage {
+    padding: 18px;
+}
+
+.prescriptionSuggestSection {
+    border: 1px solid #eee;
+    height: 100vh;
+}
+
+.patientProfilePss {
+  padding: 20px 12px;
+}
+
+.patientImgName {
+    display: flex;
+}
+
+
+.wordSuggestionSearchBox .wrapper .search_box .search_field {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .wordSuggestionSearchBox .wrapper .search_box .search_field .input {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 38px;
+    color: #6f768d;
+  }
+  
+  .wordSuggestionSearchBox .wrapper .search_box .search_field .fas {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    color: #5078ef;
+    cursor: pointer;
+  }
+  
+  .wordSuggestionSearchBox ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #9fa3b1;
+  }
+  .wordSuggestionSearchBox ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #9fa3b1;
+  }
+  .wordSuggestionSearchBox :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #9fa3b1;
+  }
+  
+  .wordSuggestionSearchBox .input:focus {
+    border-color: unset;
+    background: unset;
+    box-shadow: none;
+    outline: unset;
+  }
+
+  
+.expandButton:hover {
+    max-width: 300px;
+    color: #fff;
+  }
+  
+  .expandButton .icon {
+    font-size: 2rem;
+    margin-right: 0px;
+    padding: 0px 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .expandButton .text {
+    white-space: nowrap;
+    padding-right: 15px;
+    font-size: 1rem;
+  }
+  
+  .wordSuggestionSearchBox .primary-btn {
+    background: #4a6cf7;
+    color: #fff;
+    margin: 4px 4px;
+  }
+  
+  .wordSuggestionSearchBox .primary-btn .material-symbols-outlined {
+    transform: translateY(5px);
+    font-size: 1.2rem;
+  }
+  
+  .wordSuggestionSearchBox .primary-btn:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .wordSuggestionSearchBox .search_field {
+    position: relative;
+    padding: 15px;
+  }
+
+  .wordSuggestionSearchBox .search_field input {
+    width: 100%;
+    padding: 5px;
+  } 
+
+  .wordSuggestionSearchBox .search_field i {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    color: #aaa;
+    font-size: 19px;
+  }
+
+  .wordSuggestionsBox {
+    padding: 14px;
+  }
+
+  .wordSuggestionWords {  
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 4px;
+    height: 60vh;
+    padding: 8px;
+  }
+
+  .wordSuggestionWords span button {
+    margin: 8px;
+    padding: 3px 6px;
+    font-size: 14px;
+    background-color: #F2B33D;
+    border-radius: 5px;
+    color: #fff;
+    border: 2px solid #F2B33D;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 5px;
+  }
+
+  /* ==================== diagnosis =============================== */
+
+  .Treatment-Con{
+    background-color: #fff;
+    padding: 5px 10px;
+  }
+
+  .inputBox {
+    border: 1px solid rgb(190, 190, 190);
+    margin: 25px 0px;
+    border-radius: 5px;
+  } 
+
+  .inputBoxHead {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #eee;
+    padding: 6px 20px;
+  }
+
+  .inputBoxHead .inputBoxTitle h6 {
+    color: #4a6cf7;
+  }
+
+  .centerInputBox .inputBoxTitle h6 {
+    color: #F2B33D;
+  }
+
+  .inputBoxHead .inputBoxButton button {
+      padding: 4px 6px;
+      font-size: 14px;
+      background-color: #fff;
+      border-radius: 5px;
+      color: #4a6cf7;
+      border: 2px solid #fff;
+      box-shadow: rgb(0 0 0 / 10%) 0px 3px 5px;
+  }
+
+  .tab-pane{
+    border-right: 1px solid #fff !important;
+  } 
+
+  .inputBoxInput {
+    padding: 10px;
+  }
+
+  .addInputButton svg {
+    color: #4a6cf7;
+    font-size: 22px;
+  }
+
+  .inputBoxInput input,
+  .inputBoxInput select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: rgb(195, 195, 195) 1px solid;
+  }
+
+  .inputBoxInput input:active{
+    border: rgb(56, 116, 159) 1px solid !important;
+  }
+
+  /* ======================== Prescription ======================= */
+
+  .inputBoxPrescription {
+    padding: 0px;
+    display: unset;
+  }
+
+  .inputBoxPrescription .row {
+    padding:  6px;
+  }
+
+  .inputBoxPrescription .col-1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .addDrugsButton {
+    display: flex;
+  }
+
+  .inputBoxHeadIcons .headIcon {
+    margin: 0px 5px;
+  }
+
+  .inputBoxHeadIcons .headIcon svg {
+    color:rgb(56, 116, 159);
+  }
+
+  .addDrugsButton button { 
+    background: #4a6cf7;
+    color: #fff;
+    border: 1px solid #4a6cf7;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 4px 8px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 5px;
+  }
+
+  .addDrugsButton span {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-family: var(---headFont);
+    font-size: 15px;
+    color: rgb(138, 138, 138);
+  }
+
+  .drugAllergySection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 5px;
+    border: solid 1px #aaa;
+    margin-top: 10px;
+    padding: 6px 12px;
+  }
+
+  .drugAllergyButtons {
+    display: flex;
+    align-items: center;
+  }
+
+  .drugAllerygyText h6 {
+   color: #4a6cf7;
+   margin-bottom: 0;
+  }
+
+  .drugAllergyButtons .drugAllergyAddIcon svg {
+    color: #4a6cf7;
+    font-size: 25px;
+  }
+
+  .drugAllergyButtons button {
+    margin: 0px 8px;
+    padding: 2px 12px;
+    background-color: #fff;
+    border: #fff solid 2px;
+    border-radius: 4px;
+    color: #4a6cf7;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 5px;
+  }
+
+  .prescreptionDuration select {
+    font-size: 12px;
+  } 
+
+  .prescreptionDuration select option {
+    font-size: 12px;
+  } 
+  /* ================= Summary =================== */
+
+  .savePrintButtons {
+    background-color: #eee;
+    display: flex;
+    padding: 10px;
+  }
+
+  .savePrintButtons .savePrintButton button{
+    background: #4a6cf7;
+    color: #fff;
+    margin: 4px 4px;
+    border: 1px solid #4a6cf7;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 4px 8px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 5px;
+  }
+
+  .savePrintButtons .savePrintButton span {
+    margin: 0px 6px;
+  }
+
+  .nameComplaintSection {
+    padding: 12px 8px;
+  }
+
+  .nameComplaintSection hr {
+    margin: 0px;
+  }
+
+  .nameComplaintSection .nameLine  {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nameLine .nameAge h6 {
+    padding: 0px 5px;
+  }
+
+  .complaintsDiagnosisSmy li {
+    list-style: decimal;
+  }
+  
+  .testInputHead .inputTitleIcon svg ,
+  .testSection .inputTestIcon svg,
+  .proceduresInputTitle .inputTitleIcon svg{
+    color: #4a6cf7;
+    font-size: 18px;
+    margin: 0px 5px;
+  }
+
+  .handoutInputTitle h6 {
+    color: #F2B33D !important;
+  }
+
+  .instructionsInputBoxTitle h6 span,
+  .handoutInputTitle h6 span {
+    font-family: var(---headFont);
+    font-size: 14px;
+    color: rgb(138, 138, 138);
+  }
+
+.instructionsBoxSmy {
+  border: 2px solid rgb(175 175 175);
+  border-radius: 5px;
+  padding: 6px;
+  margin: 5px 0px;
+}
