@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
 import SideBar from "../components/Sidebar/SideBar";
 import {
     useAddNewHospitalMutation,
@@ -43,10 +44,6 @@ const AddHospital = () => {
         setActiveImage("updateImage");
     }
 
-    console.log(file);
-    console.log(imageFile);
-    console.log(activeImage);
-
     const submitHospital = async (e) => {
         e.preventDefault();
         const data = new FormData(e.currentTarget);
@@ -57,6 +54,8 @@ const AddHospital = () => {
         formData.append("phone_no", data.get("phone"));
         formData.append("Description", data.get("shortDesc"));
         formData.append("city", data.get("city"));
+        formData.append("pincode", data.get("pincode"));
+        formData.append("link_address", data.get("gmblink"));
         formData.append("state", data.get("state"));
         formData.append("token", access_token);
 
@@ -81,6 +80,8 @@ const AddHospital = () => {
         formData.append("phone_no", data.get("phone"));
         formData.append("Description", data.get("shortDesc"));
         formData.append("city", data.get("city"));
+        formData.append("pincode", data.get("pincode"));
+        formData.append("link_address", data.get("gmblink"));  
         formData.append("state", data.get("state"));
         formData.append("token", access_token);
         formData.append("list_of_Account", id);
@@ -109,7 +110,6 @@ const AddHospital = () => {
                                     <div className="auth-cover">
                                         <div className="title text-center">
                                             <h1 className="text-primary mb-10">
-                                                {" "}
                                                 {listData == "" ? "Add Hospital Name" : "Edit Hospital"}
                                             </h1>
                                         </div>
@@ -129,7 +129,7 @@ const AddHospital = () => {
                             <div className="col-lg-8">
                                 <div className="card-style settings-card-2 mb-30">
                                     {listData == "" ? (
-                                        <form onSubmit={submitHospital}>
+                                        <Form onSubmit={submitHospital}>
                                             <div className="row">
                                                 <div className="col-12 col-lg-6">
                                                     <div className="input-style-1">
@@ -142,16 +142,7 @@ const AddHospital = () => {
                                                         />
                                                     </div>
                                                 </div>
-                                                <div className="col-12 col-lg-6">
-                                                    <div className="input-style-1">
-                                                        <label>Address </label>
-                                                        <input
-                                                            type="text"
-                                                            name="address"
-                                                            placeholder="Enter Address"
-                                                        />
-                                                    </div>
-                                                </div>
+                                               
                                                 <div className="col-12 col-lg-6">
                                                     <div className="input-style-1">
                                                         <label>Phone No</label>
@@ -162,16 +153,30 @@ const AddHospital = () => {
                                                         />
                                                     </div>
                                                 </div>
-                                                <div className="col-12 col-lg-6">
+
+
+                                                
+                                                <div className="col-12 col-lg-12">
                                                     <div className="input-style-1">
-                                                        <label>City </label>
+                                                        <label>Address</label>
                                                         <input
                                                             type="text"
-                                                            name="city"
-                                                            placeholder="Enter City Name"
+                                                            name="address"
+                                                            placeholder="Enter Address"
                                                         />
                                                     </div>
                                                 </div>
+                                                <div className="col-12 col-lg-6">
+                                                        <div className="input-style-1">
+                                                            <label>Pincode</label>
+                                                            <input
+                                                                type="number"
+                                                                name="pincode"
+                                                                placeholder="Enter Pincode"
+                                                            />
+                                                        </div>
+                                                    </div>
+
                                                 <div className="col-12 col-lg-6">
                                                     <div className="input-style-1">
                                                         <label className="form-label" for="customFile">
@@ -186,6 +191,18 @@ const AddHospital = () => {
                                                         />
                                                     </div>
                                                 </div>
+
+                                              
+                                                <div className="col-12 col-lg-6">
+                                                    <div className="input-style-1">
+                                                        <label>City </label>
+                                                        <input
+                                                            type="text"
+                                                            name="city"
+                                                            placeholder="Enter City Name"
+                                                        />
+                                                    </div>
+                                                </div>
                                                 <div className="col-12 col-lg-6">
                                                     <div className="input-style-1">
                                                         <label>State </label>
@@ -196,6 +213,18 @@ const AddHospital = () => {
                                                         />
                                                     </div>
                                                 </div>
+                                                <div className="col-12 col-lg-12">
+                                                        <div className="input-style-1">
+                                                            <label>GMB Link </label>
+                                                            <input
+                                                                type="text"
+                                                                name="gmblink"
+                                                                placeholder="Google MyBusiness Link"
+
+                                                            />
+                                                        </div>
+                                                    </div>
+                                              
                                                 <div className="col-12">
                                                     <div className="input-style-1">
                                                         <label>Hospital Short Description</label>
@@ -212,13 +241,13 @@ const AddHospital = () => {
                                                     </button>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </Form>
                                     ) : (
                                         ""
                                     )}
                                     {listData &&
                                         listData.map((workObj, index) => (
-                                            <form onSubmit={EditHospital}>
+                                            <Form onSubmit={EditHospital}>
                                                 <div className="row">
                                                     <div className="col-12 mb-5">
                                                         <input
@@ -262,7 +291,7 @@ const AddHospital = () => {
                                                     </div>
                                                     <div className="col-12 col-lg-6">
                                                         <div className="input-style-1">
-                                                            <label>Address </label>
+                                                            <label>Address</label>
                                                             <input
                                                                 type="text"
                                                                 name="address"
@@ -279,6 +308,17 @@ const AddHospital = () => {
                                                                 defaultValue={workObj.mobile}
                                                                 name="phone"
                                                                 placeholder="Phone No"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-12 col-lg-6">
+                                                        <div className="input-style-1">
+                                                            <label>Pincode</label>
+                                                            <input
+                                                                type="number"
+                                                             defaultValue={workObj.pincode}
+                                                                name="pincode"
+                                                                placeholder="Enter Pincode"
                                                             />
                                                         </div>
                                                     </div>
@@ -307,7 +347,7 @@ const AddHospital = () => {
                               />
                             </div>
                           </div> */}
-                                                    <div className="col-12 col-lg-12">
+                                                    <div className="col-12 col-lg-6">
                                                         <div className="input-style-1">
                                                             <label>State </label>
                                                             <input
@@ -323,50 +363,15 @@ const AddHospital = () => {
                                                             <label>GMB Link </label>
                                                             <input
                                                                 type="text"
-                                                                // defaultValue={workObj.state}
-                                                                name="gmb link"
+                                                                defaultValue={workObj.gmb_Link}
+                                                                name="gmblink"
                                                                 placeholder="Google MyBusiness Link"
 
                                                             />
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 col-lg-12">
-                                                        <div className="input-style-1">
-                                                            <label>Pincode</label>
-                                                            <input
-                                                                type="number"
-                                                                // defaultValue={workObj.state}
-                                                                name="pincode"
-                                                                placeholder="Enter State"
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-12 col-lg-12">
-                                                        <div className="input-style-1">
-                                                            <input type="checkbox" id="monday" name="Monday" value="Monday" />
-                                                            <label for="monday">Mon</label>
-                                                            <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday" />
-                                                            <label for="Tuesday">Tue</label>
-                                                            <input type="checkbox" id="Wednusday" name="Wednusday" value="Wednusday" />
-                                                            <label for="Wednusday"> Wed</label>
-                                                            <input type="checkbox" id="Thursday" name="Thursday" value="Thursday" />
-                                                            <label for="Thursday">Thurs</label>
-                                                            <input type="checkbox" id="Friday" name="Friday" value="Friday" />
-                                                            <label for="Friday">Fri</label>
-                                                            <input type="checkbox" id="Saturday" name="Saturday" value="Saturday" />
-                                                            <label for="Saturday"> Sat</label>
-                                                            <input type="checkbox" id="Sunday" name="Sunday" value="Sunday" />
-                                                            <label for="Sunday"> Sun</label>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-12 col-lg-12">
-                                                        <div className="input-style-1">
-                                                            <label for="starttime">Start time:</label>
-                                                            <input type="time" id="starttime" name="start-time" />
-                                                            <label for="Endtime">End time:</label>
-                                                            <input type="time" id="Endtime" name="end-time" />
-                                                        </div>
-                                                    </div>
+                                                    
+                                                  
                                                     <div className="col-12">
                                                         <div className="input-style-1">
                                                             <label>Hospital Short Description</label>
@@ -384,7 +389,7 @@ const AddHospital = () => {
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </Form>
                                         ))}
                                 </div>
                             </div>
