@@ -13,6 +13,9 @@ import SideBar from "../components/Sidebar/SideBar";
 import NavbarComp from "../components/NavbarComp/NavbarComp.js";
 import { getToken } from "../services/localStorageServices";
 import { useEffect } from "react";
+import AddHospitalSchedule from "../components/AddHospitalSchedule/AddHospitalSchedule.jsx";
+import { Button } from "react-bootstrap";
+import { SlCalender } from "react-icons/sl";
 
 const Hospitals = () => {
   const { access_token } = getToken();
@@ -55,12 +58,25 @@ const Hospitals = () => {
     }
   };
 
+  // ============= Hospital Id and Name Fetch for Modal =======
+  const [hospitalIdFetch, setHospitalIdFetch] = useState();
+
+  const [hospitalNameFetch, setHospitalNameFetch] = useState();
+
+  const scheduleModal = (hospitalIdFetchData, hospitalNameFetchData) => {
+    setHospitalIdFetch(hospitalIdFetchData);
+    setHospitalNameFetch(hospitalNameFetchData);
+    setActiveDialoge(true);
+  };
+
+  // ===== Dropdown ========
   $(".dropdown ul li").on("click", function () {
     var text = $(".default_option").text();
     console.log(text);
     $(".default_option").val(text);
     $(".dropdown ul").removeClass("active");
   });
+  const [activeDialoge, setActiveDialoge] = useState(false);
   return (
     <div>
       <SideBar>
@@ -146,84 +162,37 @@ const Hospitals = () => {
                               <MdDelete />
                             </div>
                           </div>
+                          <div>
+                            <div className="scheduleBtn">
+                              <Button
+                                variant="outlined"
+                                onClick={() =>
+                                  scheduleModal(
+                                    workObj.list_of_account,
+                                    workObj.first_name
+                                  )
+                                }
+                              >
+                                <SlCalender />
+                              </Button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   ))}
-                {/* <div className="col-lg-6">
-                  <div className="CategoryCard">
-                    <div className="categImg">
-                      <img src={Navanit} alt="" />
-                    </div>
-                    <div className="categText">
-                      <h2>Nanavati Max Super Speciality Hospital</h2>
-                      <p>Bandra West</p>
-                    </div>
-                    <div className="categButton">
-                      <div>
-                        <div className="editBtn">
-                          <MdEdit />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="deleteBtn">
-                          <MdDelete />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="CategoryCard">
-                    <div className="categImg">
-                      <img src={Citi} alt="" />
-                    </div>
-                    <div className="categText">
-                      <h2>Citi Hospital</h2>
-                      <p>Mira Road East</p>
-                    </div>
-                    <div className="categButton">
-                      <div>
-                        <div className="editBtn">
-                          <MdEdit />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="deleteBtn">
-                          <MdDelete />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="CategoryCard">
-                    <div className="categImg">
-                      <img src={kokilaben} alt="" />
-                    </div>
-                    <div className="categText">
-                      <h2>Kokilaben Dhirubhai Ambani Hospital</h2>
-                      <p>Andheri West</p>
-                    </div>
-                    <div className="categButton">
-                      <div>
-                        <div className="editBtn">
-                          <MdEdit />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="deleteBtn">
-                          <MdDelete />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </section>
         </div>
       </SideBar>
+      <AddHospitalSchedule
+        hospitalID={hospitalIdFetch}
+        open={activeDialoge}
+        close={() => setActiveDialoge(false)}
+        token={access_token}
+        hospitalName={hospitalNameFetch}
+      />
     </div>
   );
 };
