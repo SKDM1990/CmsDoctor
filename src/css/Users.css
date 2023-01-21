@@ -260,3 +260,68 @@
   outline: 0;
   box-shadow: none;
 }
+
+
+/* ================= Hospiral schedule button =================== */
+
+.AddScheduleHead h6 {
+  text-align: center;
+}
+
+.CategoryCard .categButton .scheduleBtn button {
+  border: none;
+}
+
+.CategoryCard .categButton .scheduleBtn svg {
+  color: #fff;
+  margin: 0px 10px;
+  background: #099;
+  padding: 5px;
+  font-size: 35px;
+}
+
+.addDayTime .inputBoxHead {
+  display: block;
+}
+
+.addedDayTimeInner {
+  padding: 5px 0px ;
+}
+
+/* .addedDayTimeInner::after {
+  content: '';
+  height: 1px;
+  background-color: #111;
+  width: 95%;
+  overflow: hidden;
+  margin: auto;
+} */
+
+.addedDayTimeInner .addedDayTimeDeleteIcon svg {
+  color: #da0e0e;
+} 
+
+/* 
+.addDayTime .inputboxHeadInner,
+.addedDayTimeInner   {
+  display: flex;
+  justify-content: space-around;
+}
+
+.addedDayTimeInner .addedDayTimeBox {
+  text-align: center;
+}
+
+.inputBoxInput .inputBoxInoutInnerDiv {
+  margin: 0px 5px;
+} */
+
+.inputBoxInoutInnerDiv button {
+  border: none;
+  background: none;
+}
+
+.inputBoxInoutInnerDiv button svg {
+  font-size: 25px;
+  color: rgb(125, 205, 6);
+}
