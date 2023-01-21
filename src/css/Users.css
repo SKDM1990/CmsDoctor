@@ -38,8 +38,9 @@
 .CategoryCard .categButton {
   position: absolute;
   right: 50px;
-  bottom: 40%;
+  bottom: 30%;
   display: flex;
+  align-items: center;
 } 
 
 .CategoryCard .categButton .editBtn svg {
